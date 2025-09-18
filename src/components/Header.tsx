@@ -3,14 +3,17 @@ import { Search, ShoppingCart, Mic, MicOff, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import GroupDeals from "@/components/GroupDeals";
+import { Product } from "@/components/ProductCard";
 
 interface HeaderProps {
   cartItemCount: number;
   onCartClick: () => void;
   onSearch: (query: string) => void;
+  onAddToCart: (product: Product) => void;
 }
 
-const Header = ({ cartItemCount, onCartClick, onSearch }: HeaderProps) => {
+const Header = ({ cartItemCount, onCartClick, onSearch, onAddToCart }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
 
@@ -92,6 +95,9 @@ const Header = ({ cartItemCount, onCartClick, onSearch }: HeaderProps) => {
               </div>
             </div>
           </form>
+
+          {/* Group Deals */}
+          <GroupDeals onAddToCart={onAddToCart} />
 
           {/* User Actions */}
           <div className="flex items-center gap-3">

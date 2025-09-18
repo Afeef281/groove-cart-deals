@@ -14,7 +14,7 @@ const Index = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [rewardPoints, setRewardPoints] = useState(1250); // Mock reward points
+  const [rewardPoints, setRewardPoints] = useState(100); // Mock reward points
 
   // Filter products based on category and search
   const filteredProducts = useMemo(() => {
@@ -87,6 +87,7 @@ const Index = () => {
         cartItemCount={totalCartItems}
         onCartClick={() => setIsCartOpen(true)}
         onSearch={setSearchQuery}
+        onAddToCart={addToCart}
       />
 
       <Hero />
