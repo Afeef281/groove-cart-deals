@@ -27,7 +27,7 @@ const Hero = () => {
               <ShoppingBag className="mr-2 h-5 w-5" />
               Start Shopping
             </Button>
-            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-accent/50 text-accent hover:bg-accent/20 shadow-primary">
               Learn More
             </Button>
           </div>

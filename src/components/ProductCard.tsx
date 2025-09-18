@@ -8,7 +8,7 @@ export interface Product {
   name: string;
   price: number;
   image: string;
-  category: 'grocery' | 'clothing';
+  category: 'grocery' | 'clothing' | 'automobile';
   rating: number;
   description: string;
   discount?: number;
